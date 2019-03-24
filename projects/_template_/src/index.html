@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Title</title>
+    <meta content="Description" name="description" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.bundle.css %>" />
+  </head>
+  <body>
+    <header>
+      <h1>HOMODSA DSADASDASDSAFSAFSAFASFASDASDAS</h1>
+      <div class="logo">
+        LOGO
+      </div>
+      <nav class="nav" role="navigation">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
+          toggle
+        </button>
+        <ul id="menu">
+          <li>MenuItem</li>
+          <li>MenuItem</li>
+          <li>MenuItem</li>
+          <li>MenuItem</li>
+          <li>MenuItem</li>
+        </ul>
+      </nav>
+    </header>
+    <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry %>"></script>
+  </body>
+</html>
