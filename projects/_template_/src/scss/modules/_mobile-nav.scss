@@ -1,11 +1,8 @@
-.nav {
-
-}
+.nav {}
 
 .nav__toggle {
-	display: none;
-
-	@media screen and (max-width: $screen-sm) {
-		display: block;
-	}
+  display: none;
+  @media screen and (max-width: $screen-sm) {
+    display: block;
+  }
 }

@@ -1,3 +1,4 @@
+console.log('bbb');
 require("core-js/fn/array/from");
 
 function mobileNavInit() {

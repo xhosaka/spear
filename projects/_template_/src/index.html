@@ -15,24 +15,32 @@
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.bundle.css %>" />
   </head>
   <body>
-    <header>
-      <h1>HOMODSA DSADASDASDSAFSAFSAFASFASDASDAS</h1>
-      <div class="logo">
-        LOGO
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          LOGO
+        </a>
+        <nav class="nav" role="navigation">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
+            toggle
+          </button>
+          <ul id="menu">
+            <li>MenuItem</li>
+            <li>MenuItem</li>
+            <li>MenuItem</li>
+            <li>MenuItem</li>
+            <li>MenuItem</li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav" role="navigation">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
-          toggle
-        </button>
-        <ul id="menu">
-          <li>MenuItem</li>
-          <li>MenuItem</li>
-          <li>MenuItem</li>
-          <li>MenuItem</li>
-          <li>MenuItem</li>
-        </ul>
-      </nav>
     </header>
+    <section>
+      <div class="container">
+        <div class="row">
+          <h1>Lets code!</h1>
+        </div>
+      </div>
+    </section>
     <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry %>"></script>
   </body>
 </html>

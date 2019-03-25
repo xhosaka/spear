@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "stylelint": "stylelint './src/**/*.scss'; exit 0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -20,12 +21,17 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-airbnb": "^0.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",
     "webpack-md5-hash": "^0.0.6"
   },
   "dependencies": {
+    "@drewbot/sass-flexbox-grid": "^2.0.7",
+    "bootstrap": "^4.3.1",
+    "bootstrap-4-grid": "^2.4.1",
     "core-js": "^2.6.5",
     "normalize.css": "^8.0.1",
     "postcss-normalize": "^7.0.1"
