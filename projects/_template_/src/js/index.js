@@ -16,3 +16,7 @@ function mobileNavInit() {
 }(function initApp() {
 		mobileNavInit();
 })();
+
+const str = 'Do you wanna be my girl';
+
+console.log(str.split(' '));
