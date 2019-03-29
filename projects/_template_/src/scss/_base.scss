@@ -9,6 +9,11 @@ body {
   background: url("/img/pizza.svg");
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: auto;
+}
+
 a {
   color: $fontColorPrimary;
 }

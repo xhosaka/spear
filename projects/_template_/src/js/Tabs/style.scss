@@ -1,0 +1,26 @@
+/* stylelint-disable no-unknown-animations */
+
+.tabs {
+  &__selector-item {
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__tab-pane {
+    overflow: hidden;
+    height: 0;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &[data-tab-pane--is-active] {
+      height: auto;
+      animation: fadeIn .5s;
+    }
+  }
+}
