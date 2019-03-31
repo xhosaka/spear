@@ -31,9 +31,15 @@ module.exports = {
           loader: "babel-loader"
         }
       }, {
-        test: /\.(jpg|png)$/,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: {
-          loader: "file-loader"
+          loader: "file-loader",
+          options: {
+            useRelativePath: true,
+            name: "[name].[ext]",
+            outputPath: "img/",
+            publicPath: '../img/'
+          }
         }
       }, {
         test: /\.scss$/,
