@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcssNormalize = require('postcss-normalize');
 
-const PROJECT_NAME = '_template_';
+const PROJECT_NAME = 'wpro';
 
 const pathes = {
   dist: `./projects/${PROJECT_NAME}/dist`,
@@ -28,16 +28,16 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       }, {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
             useRelativePath: true,
-            name: "[name].[ext]",
-            outputPath: "img/",
+            name: '[name].[ext]',
+            outputPath: 'img/',
             publicPath: '../img/'
           }
         }
