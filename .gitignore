@@ -22,3 +22,4 @@ yarn-error.log*
 
 projects/*
 !projects/_template_/
+projects/_template_/dist

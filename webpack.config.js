@@ -6,8 +6,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcssNormalize = require('postcss-normalize');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const PROJECT_NAME = 'wpro';
+const PROJECT_NAME = '_template_';
 
 const pathes = {
   dist: `./projects/${PROJECT_NAME}/dist`,
@@ -40,6 +41,12 @@ module.exports = {
             outputPath: 'img/',
             publicPath: '../img/'
           }
+        }
+      }, {
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          minimize: true
         }
       }, {
         test: /\.scss$/,
@@ -75,7 +82,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({filename: `css/styles.[contenthash].css`}),
-    new HtmlWebpackPlugin({inject: false, hash: true, template: `${pathes.src}/index.html`, filename: 'index.html'}),
+    new HtmlWebpackPlugin({inject: true, hash: true, template: `${pathes.src}/index.html`, filename: 'index.html'}),
     new WebpackMd5Hash()
   ]
 };
