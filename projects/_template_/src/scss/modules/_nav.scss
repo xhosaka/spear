@@ -1,6 +1,7 @@
 .nav {
-  &__button {
-    display: block;
+  &__button.hamburger {
+    display: inline-flex;
+    -webkit-appearance: none;
 
     @media screen and (min-width: $screen-sm) {
       display: none;
@@ -15,4 +16,3 @@
     }
   }
 }
-
