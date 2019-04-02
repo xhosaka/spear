@@ -43,12 +43,6 @@ module.exports = {
           }
         }
       }, {
-        test: /\.html$/,
-        loader: 'html-loader',
-        options: {
-          minimize: true
-        }
-      }, {
         test: /\.scss$/,
         use: [
           'style-loader',

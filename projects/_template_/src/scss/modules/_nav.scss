@@ -1,0 +1,18 @@
+.nav {
+  &__button {
+    display: block;
+
+    @media screen and (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__main {
+    display: block;
+
+    @media screen and (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+}
+

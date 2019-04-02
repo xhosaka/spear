@@ -3,10 +3,10 @@ body {
   font-size: 16px;
   line-height: 1.35;
   font-weight: 400;
+  min-width: 320px;
   text-rendering: optimizeLegibility;
   background-color: $bgColor;
   color: $fontColorPrimary;
-  background: url("../img/wow/pizza.svg");
 }
 
 .no-scroll {

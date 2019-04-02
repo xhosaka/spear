@@ -17,19 +17,25 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="/" class="logo">
+        <a href="/" class="logo" aria-label="To homepage">
           LOGO
         </a>
-        <nav class="nav" role="navigation">
-          <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
-            toggle
-          </button>
-          <ul id="menu">
-            <li>MenuItem</li>
-            <li>MenuItem</li>
-            <li>MenuItem</li>
-            <li>MenuItem</li>
-            <li>MenuItem</li>
+        <nav class="nav" id="navigation" role="navigation" aria-hidden="false" aria-labelledby="nav-button">
+          <div type="button" class="nav__button hamburger hamburger--spin js-hamburger" id="nav-button" aria-controls="nav-list" aria-expanded="false" aria-label="Navigation">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+          <ul class="nav__main" id="nav-list">
+            <li>
+              <a href="#">MenuItem</a>
+            </li>
+            <li>
+              <a href="#">MenuItem</a>
+            </li>
+            <li>
+              <a href="#">MenuItem</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -42,6 +48,6 @@
         </div>
       </div>
     </section>
-    <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry[0] %>"></script>
   </body>
 </html>

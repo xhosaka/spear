@@ -1,5 +1,9 @@
 require("core-js/fn/array/from");
 
+document.querySelector('.nav__button').addEventListener('click', function() {
+  this.classList.toggle('is-active');
+})
+
 function mobileNavigationInit(){
   const button = document.querySelector('.mob-menu__nav-btn');
 
