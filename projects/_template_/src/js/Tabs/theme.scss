@@ -1,0 +1,42 @@
+[data-tabs] {
+  margin: 25px 0;
+
+      
+  .tabs__selector-container {
+    border-bottom: .0625rem solid #dadce0;
+  }
+
+  [data-tab-selector] {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 20px;
+    border-left: .1875rem solid transparent;
+    border-right: .1875rem solid transparent;
+
+
+    &[is-active] {
+      border-bottom: .1875rem solid #1a73e8;
+    }
+  }
+
+  [data-tab-pane] {
+    overflow: hidden;
+    height: 0;
+
+    &[is-active] {
+      height: auto;
+    }
+  }
+
+  .tabs__content {
+    margin: 15px 0 0;
+  }
+}

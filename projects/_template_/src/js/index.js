@@ -1,5 +1,6 @@
 import navigation from './Navigation'
 require("core-js/fn/array/from");
+import Tabs from './Tabs';
 
 navigation();
 
@@ -27,3 +28,23 @@ function stickyHeaderInit() {
 
   window.addEventListener('scroll', onScrollHandler);
 }
+
+
+const tabs = new Tabs(document.querySelector('.tabs'));
+
+function xz() {
+  const targetNode = document.body;
+  const config = { attributes: true, childList: true, subtree: true };
+
+  const callback = () => {
+    var iframe = document.querySelector('.trustpilot-widget iframe');
+    if (!iframe) return null;
+    var elmnt = iframe.contentWindow.document.getElementsByTagName("a")[0];
+  }
+
+  const observer = new MutationObserver(callback);
+
+  observer.observe(targetNode, config);
+}
+
+xz();

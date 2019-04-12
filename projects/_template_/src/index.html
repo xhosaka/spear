@@ -45,9 +45,79 @@
         <div class="row">
           <h1>Lets code!</h1>
           <img src="<%=require('./img/18663186.png')%>" alt="" />
+          <div class="tabs">
+            <div class="tabs__selector-container" role="tablist" aria-label="Entertainment">
+              <button
+                class="tabs__selector-item"
+                data-tab-selector
+                role="tab"
+                aria-selected="false"
+                aria-controls="pane-0"
+              >
+                Pane 0
+              </button>
+              <button
+                class="tabs__selector-item"
+                data-tab-selector
+                role="tab"
+                aria-selected="false"
+                aria-controls="pane-1"
+              >
+                Pane 1
+              </button>
+              <button
+                class="tabs__selector-item"
+                data-tab-selector
+                role="tab"
+                aria-selected="false"
+                aria-controls="pane-2"
+              >
+                Pane 2
+              </button>
+            </div>
+            <div class="tabs__content">
+              <div
+                class="tabs__pane"
+                data-tab-pane
+                role="tabpanel"
+                aria-labelledby="pane-0"
+                aria-hidden="false"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem, ipsum. Nesciunt minima, porro totam. Facere porro nam ea illo eius sequi ratione nihil tenetur, accusamus inventore maxime. Quaerat, consequuntur.
+                00000000000000000000000000
+              </div>
+              <div
+                class="tabs__pane"
+                data-tab-pane
+                role="tabpanel"
+                aria-labelledby="pane-1"
+                aria-hidden="false"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem, ipsum. Nesciunt minima, porro totam. Facere porro nam ea illo eius sequi ratione nihil tenetur, accusamus inventore maxime. Quaerat, consequuntur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos hic, ipsam, deleniti quidem, ad laudantium iusto quod nobis, at nisi veniam ea excepturi aspernatur impedit cumque minima esse. Est, modi.
+              </div>
+              <div
+                class="tabs__pane"
+                data-tab-pane
+                role="tabpanel"
+                aria-labelledby="pane-2"
+                aria-hidden="false"
+              >
+                1111111111111111111111111111111111111111111111111111111111111
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ex optio hic eius non dolore expedita magnam, culpa maiores debitis iusto quis fugit dignissimos architecto libero officiis numquam. Quo, laudantium.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nihil incidunt dolores asperiores maiores molestias, possimus nemo quaerat? Consectetur eos nulla totam tempora dolorem excepturi cumque accusantium culpa doloremque labore.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem, ipsum. Nesciunt minima, porro totam. Facere porro nam ea illo eius sequi ratione nihil tenetur, accusamus inventore maxime. Quaerat, consequuntur.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <script src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
+    <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="56b4a85a0000ff00058889bd" data-style-height="20px" data-style-width="100%" data-theme="light">
+    <a class="trustpilot-widget__initial-link" href="https://www.trustpilot.com/review/advancedwriters.com" target="_blank" rel="nofollow">Trustpilot</a>
+    </div>
+
     <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry[0] %>"></script>
   </body>
 </html>
