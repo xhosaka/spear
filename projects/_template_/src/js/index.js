@@ -27,3 +27,4 @@ function stickyHeaderInit() {
 
   window.addEventListener('scroll', onScrollHandler);
 }
+

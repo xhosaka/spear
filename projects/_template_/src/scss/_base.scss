@@ -41,5 +41,5 @@ ul {
   justify-content: center;
 
   &:disabled,
-  [disabled=disabled] {}
+  [disabled="disabled"] {}
 }
