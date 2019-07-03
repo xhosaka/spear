@@ -30,20 +30,16 @@ const loadScript = (source, beforeEl, async = true, defer = true) => {
   });
 };
 
-const observeElement = ({
-  element,
-  marginValue = 200,
-  callback = {},
-}) => {
+const observeElement = ({ element, marginValue = 200, callback = {} }) => {
   if (element && typeof element === 'string') {
     const targets = document.querySelectorAll(element);
     const targetsConfig = {
       rootMargin: `${marginValue}px 0px ${marginValue}px 0px`,
-      threshold: 0,
+      threshold: 0
     };
 
     const elementObserver = new IntersectionObserver((entries, self) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           self.unobserve(entry.target);
           callback(entry.target);
@@ -52,7 +48,7 @@ const observeElement = ({
     }, targetsConfig);
 
     if (targets) {
-      Array.prototype.slice.call(targets).forEach((target) => {
+      Array.prototype.slice.call(targets).forEach(target => {
         elementObserver.observe(target);
       });
     }
@@ -66,23 +62,22 @@ const hasParent = (el, parent, stopEl) => {
     return true;
   } else {
     hasParent(el.parentNode, parent);
-  } 
+  }
 };
 
-
 function toggleSlide(block) {
-  !block.offsetHeight ? slideDown(block) : slideUp(block); 
+  !block.offsetHeight ? slideDown(block) : slideUp(block);
 }
 
 function slideUp(block) {
   // if (!block.offsetHeight) return false;
-  
+
   block.style.height = '0';
 }
 
 function slideDown(block) {
   // if (block.offsetHeight) return false;
-  
+
   block.style.height = `${block.children[0].offsetHeight}px`;
 }
 
@@ -92,7 +87,7 @@ function is_touch_device() {
     return window.matchMedia(query).matches;
   };
 
-  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+  if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
     return true;
   }
 
@@ -102,11 +97,11 @@ function is_touch_device() {
   return mq(query);
 }
 
-
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
-    var context = this, args = arguments;
+    var context = this,
+      args = arguments;
     var later = function() {
       timeout = null;
       if (!immediate) func.apply(context, args);
@@ -116,7 +111,7 @@ function debounce(func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
-};
+}
 
 function wrap(el, wrapper) {
   el.parentNode.insertBefore(wrapper, el);
@@ -124,7 +119,7 @@ function wrap(el, wrapper) {
 }
 
 var wrapAll = (query, tag) => {
-  document.querySelectorAll( query ).forEach( elem => {
+  document.querySelectorAll(query).forEach(elem => {
     const div = document.createElement(tag);
     elem.parentElement.insertBefore(div, elem);
     div.appendChild(elem);
@@ -132,15 +127,11 @@ var wrapAll = (query, tag) => {
 };
 
 function wrapInner(parent, wrapper) {
-  if (typeof wrapper === "string") wrapper = document.createElement(wrapper);
+  if (typeof wrapper === 'string') wrapper = document.createElement(wrapper);
 
   var div = parent.appendChild(wrapper);
 
-  while(parent.firstChild !== wrapper)
-    wrapper.appendChild(parent.firstChild);
+  while (parent.firstChild !== wrapper) wrapper.appendChild(parent.firstChild);
 }
-
-
-
 
 // generate ie11 polyfills!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

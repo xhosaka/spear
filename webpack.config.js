@@ -30,25 +30,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: {
-          loader: 'file-loader',
-          options: {
-            useRelativePath: true,
-            name: '[name].[ext]',
-            outputPath: 'img/',
-            publicPath: 'img/'
-          }
-        }
-      },
-      {
         test: /\.scss$/,
         use: [
           'style-loader',
@@ -78,7 +59,26 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            useRelativePath: true,
+            name: '[folder]/[name].[ext]',
+            outputPath: 'img/',
+            publicPath: 'img/'
+          }
+        }
+      },
     ]
   },
   plugins: [
@@ -89,9 +89,7 @@ module.exports = {
   ],
   optimization: {
     minimizer: [
-      new TerserJSPlugin({
-
-      }),
+      new TerserJSPlugin({}),
       new OptimizeCSSAssetsPlugin({
         cssProcessorPluginOptions: {
           preset: ['default', { discardComments: { removeAll: true } }],

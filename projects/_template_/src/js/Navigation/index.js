@@ -3,32 +3,21 @@ import './style.scss';
 export default function navigation() {
   const button = document.getElementById('nav-button');
 
-  if (!button) 
-    return false;
-  
+  if (!button) return false;
+
   const nav = document.querySelector('.nav');
   const navList = nav.querySelector('.nav__main');
 
-  if (!navList.offsetWidth, !navList.offsetHeight) {
+  if ((!navList.offsetWidth, !navList.offsetHeight)) {
     navList.setAttribute('aria-hidden', true);
   }
 
   const toggle = () => {
-    button
-      .classList
-      .toggle('is-active');
-    navList
-      .classList
-      .toggle('is-active');
+    button.classList.toggle('is-active');
+    navList.classList.toggle('is-active');
 
-    document
-      .documentElement
-      .classList
-      .toggle('no-scroll');
-    document
-      .body
-      .classList
-      .toggle('no-scroll');
+    document.documentElement.classList.toggle('no-scroll');
+    document.body.classList.toggle('no-scroll');
 
     if (navList.classList.contains('is-active')) {
       navList.setAttribute('aria-hidden', false);
@@ -44,7 +33,7 @@ export default function navigation() {
       navList.style.height = '';
       navList.removeEventListener('click', menuOnClickHandler);
     }
-  }
+  };
 
   const menuOnClickHandler = e => e.target === navList && toggle();
 

@@ -2,11 +2,11 @@
   position: relative;
 
   &:before {
+    position: absolute;
+    top: 50%;
+    right: 7px;
     display: inline-block;
     pointer-events: none;
-    position: absolute;
-    right: 7px;
-    top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;

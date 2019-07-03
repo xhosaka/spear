@@ -1,41 +1,32 @@
 @mixin placeholder {
+
   &::-webkit-input-placeholder {
-    @content
+    @content;
   }
 
   &:-moz-placeholder {
-    @content
+    @content;
   }
 
   &::-moz-placeholder {
-    @content
+    @content;
   }
 
   &:-ms-input-placeholder {
-    @content
+    @content;
   }
 }
 
 @mixin valid {
+
   &:focus:required:invalid {
-    @content
+    @content;
   }
 }
 
 @mixin invalid {
+
   &:focus:required:invalid {
-    @content
+    @content;
   }
-}
-
-@function rem($pixels, $context: $baseFontSize) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1rem;
 }

@@ -1,9 +1,17 @@
 @import "~normalize.css";
+
 @import "~bootstrap/scss/bootstrap-grid";
+
 @import "./mixins";
+
 @import "./variables";
+
 @import "./fonts";
+
 @import "./base";
+
 @import "./modules/nav";
+
 @import "./modules/hamburger";
+
 @import "./modules/styled-select";
